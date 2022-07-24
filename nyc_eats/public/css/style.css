@@ -1,0 +1,43 @@
+/*  Autosuggest suggestion box */
+
+.search-container {
+  position: relative;
+}
+
+.search-container input {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.search-container .suggestions {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+}
+
+ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul.has-suggestions {
+  display: block;
+}
+
+ul li {
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+ul li:hover {
+  background-color: rgb(231, 220, 220);
+}
+
+input {
+  border-bottom: 2px solid black;
+}
