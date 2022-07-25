@@ -1,4 +1,4 @@
-/* Typography*/
+/* General Colors and Typography*/
 
 header,
 h1 {
@@ -18,6 +18,8 @@ h1 > span {
 
 body {
   font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  background-color: rgb(12, 12, 12);
 }
 
 small {
