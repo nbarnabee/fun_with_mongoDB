@@ -24,6 +24,15 @@ exports.nycEatsSearch = async (req, res) => {
       )
       .limit(5)
       .toArray();
+    // I did this to try to remove all of the McDonalds et al from the Burgers results, but no luck.  I would be better off removing fast food joints from the DB, probably.
+    // let names = [];
+    // let filteredResults = results.filter((a) => {
+    //   if (!names.includes(a.name)) {
+    //     names.push(a.name);
+    //     return a;
+    //   }
+    // });
+    // results = filteredResults;
     res.render("./nyc_eats/results.ejs", {
       results,
       layout: "./layouts/nyc_eats",
