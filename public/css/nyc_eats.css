@@ -8,7 +8,7 @@ h1 {
 
 h1 {
   font-size: 48px;
-  margin-bottom: 1.5rem;
+  margin-block: 1.5rem;
 }
 
 h1 > span {
@@ -20,9 +20,13 @@ body {
   font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
 }
 
-*:focus {
-  outline-color: hsla(304, 100%, 60%, 1);
-  outline-offset: 2px;
+small {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.781);
+}
+
+small > a {
+  text-decoration: underline;
 }
 
 /******  PAGE SPECIFIC ELEMENTS ***************/

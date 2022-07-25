@@ -12,6 +12,7 @@ header {
 
 footer {
   text-align: center;
+  font-size: 12px;
 }
 
 ul {
@@ -51,16 +52,20 @@ button {
   gap: 1rem;
 }
 
-.flex-container > img {
+.flex-container > .image-container {
   display: none;
 }
 
 @media screen and (min-width: 700px) {
   .container {
-    width: 60%;
+    width: 70%;
   }
-  .flex-container > img {
+  .flex-container > .image-container {
     display: block;
     max-width: 50%;
+  }
+
+  .image-container > img {
+    max-width: 100%;
   }
 }
