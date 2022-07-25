@@ -1,0 +1,44 @@
+/*  Suggestion box styles */
+
+.search-container {
+  position: relative;
+}
+
+.search-container input {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.search-container .suggestions {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.suggestions-list {
+  display: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+ul.has-suggestions {
+  display: block;
+}
+
+.suggestions-list > li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: rgb(231, 220, 220);
+}
+
+/* Other elements */
+
+body {
+  background-color: aqua;
+}
