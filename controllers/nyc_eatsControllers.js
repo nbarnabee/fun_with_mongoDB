@@ -30,7 +30,8 @@ exports.nycEatsSearch = async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-  } finally {
-    await client.close();
+    // } finally {
+    //   await client.close();
+    // Leaving this commented out.  If it's active, the program has trouble handling repeated searches; for some reason it doesn't want to reconnect.  Or maybe it's just being slow; I'm not sure.  I'm afraid this might create some issues further down the line, if I'm trying to open another connection.
   }
 };
