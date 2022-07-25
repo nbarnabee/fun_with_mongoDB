@@ -1,2 +1,2 @@
 # fun_with_mongoDB
-A series of sites built upon the test database provided by MongoDB
+A repo for projects that I've built using the MongoDB sample database
