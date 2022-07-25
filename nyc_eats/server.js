@@ -30,6 +30,19 @@ app.get("/", (req, res) => {
   }
 });
 
+app.get("/search", async (req, res) => {
+  let results = await db
+    .collection("restaurants")
+    .find(
+      { borough: req.query.borough, cuisine: req.query.cuisine },
+      { projection: { _id: 0, address: 1, name: 1 } }
+    )
+    .limit(5)
+    .toArray();
+  console.log(results);
+  res.render("results", { results });
+});
+
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });

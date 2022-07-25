@@ -1,0 +1,20 @@
+<section aria-labelledby="results">
+  <h2 id="results"></h2>
+  <ul>
+    <% if (results != "") { %>
+    <% results.forEach(result => { %>
+    <li>
+      <div class="card">
+        <h2><%= result.name %></h2>
+        <p><%= `${result.address.building} ${result.address.street}, ${result.address.zipcode}` %></p>
+      </div>
+    </li>
+
+
+
+    <% }) }  else  { %>
+    <li>Sorry, we couldn't find anything!</li>
+
+    <% } %>
+  </ul>
+</section>

@@ -1,30 +1,33 @@
-<div>
-  <h1>NYC Eats</h1>
+<section aria-labelledby="nyc-eats" class="container">
+
   <div>
     <img src="" alt="">
-    <form action="" method="">
-      <span>I'm in</span>
-      <select name="borough" id="borough">
-        <option value="Bronx">the Bronx</option>
-        <option value="Brooklyn">Brooklyn</option>
-        <option value="Manhattan">Manhattan</option>
-        <option value="Queens">Queens</option>
-        <option value="Staten Island">Staten Island</option>
-      </select>
-      <!-- <input type="text" name="borough" id="borough" placeholder="Borough" required> -->
-      <label for="borough"></label>
-      <!-- <div class="location">
-        <ul class="location-list"></ul>
-      </div> -->
-      <span>and I feel like having</span>
-
-      <div class="search-container">
-        <label for="cuisine"></label>
-        <input type="text" name="cuisine" id="cuisine">
-        <div class="suggestions cuisine-suggestions">
-          <ul class="suggestions-list cuisine-list"></ul>
+    <div>
+      <h1 id="nyc-eats">NYC Eats</h1>
+      <form action="/search" method="GET">
+        <span>I'm in</span>
+        <select name="borough" id="borough">
+          <option value="Bronx">the Bronx</option>
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Manhattan">Manhattan</option>
+          <option value="Queens">Queens</option>
+          <option value="Staten Island">Staten Island</option>
+        </select>
+        <!-- <input type="text" name="borough" id="borough" placeholder="Borough" required> -->
+        <label for="borough"></label>
+        <!-- <div class="location">
+          <ul class="location-list"></ul>
+        </div> -->
+        <span>and I feel like having</span>
+        <div class="search-container">
+          <label for="cuisine"></label>
+          <input type="text" name="cuisine" id="cuisine">
+          <div class="suggestions cuisine-suggestions">
+            <ul class="suggestions-list cuisine-list"></ul>
+          </div>
         </div>
-      </div>
-    </form>
+        <button>Search</button>
+      </form>
+    </div>
   </div>
-</div>
+</section>

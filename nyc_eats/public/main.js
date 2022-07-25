@@ -86,7 +86,7 @@ const boroughs = ["Manhattan", "Queens", "Brooklyn", "Bronx", "Staten Island"],
   ];
 
 const cuisineInput = document.getElementById("cuisine"),
-  cuisineSuggestions = document.querySelector(".cuisine-suggestions");
+  cuisineSuggestions = document.querySelector(".suggestions-list");
 
 function cuisineSearch(e) {
   const inputVal = e.currentTarget.value;
