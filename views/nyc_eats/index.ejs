@@ -1,24 +1,26 @@
 <section aria-labelledby="nyc-eats" class="container">
 
-  <div>
-    <img src="" alt="">
+  <div class="flex-container">
+    <img src="/images/andre-benz-_T35CPjjSik-unsplash.jpg"
+      alt="An aerial photograph of Times Square at night, the buildings and electronic billboards illuminated in vibrant colors.">
     <div>
-      <h1 id="nyc-eats">NYC Eats</h1>
+      <h1 id="nyc-eats">NYC <span>Eats</span></h1>
       <form action="/nycEats/search" method="GET">
-        <span>I'm in</span>
-        <select name="borough" id="borough">
-          <option value="Bronx">the Bronx</option>
-          <option value="Brooklyn">Brooklyn</option>
-          <option value="Manhattan">Manhattan</option>
-          <option value="Queens">Queens</option>
-          <option value="Staten Island">Staten Island</option>
-        </select>
-        <!-- <input type="text" name="borough" id="borough" placeholder="Borough" required> -->
-        <label for="borough"></label>
-        <!-- <div class="location">
+        <p>I'm in
+          <select name="borough" id="borough">
+            <option value="Bronx">the Bronx</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Queens">Queens</option>
+            <option value="Staten Island">Staten Island</option>
+          </select>
+          <!-- <input type="text" name="borough" id="borough" placeholder="Borough" required> -->
+          <label for="borough"></label>
+          <!-- <div class="location">
           <ul class="location-list"></ul>
         </div> -->
-        <span>and I feel like having</span>
+          and I feel like having
+        </p>
         <div class="search-container">
           <label for="cuisine"></label>
           <input type="text" name="cuisine" id="cuisine">

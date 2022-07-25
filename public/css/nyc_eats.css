@@ -1,3 +1,57 @@
+/* Typography*/
+
+header,
+h1 {
+  font-family: "Bebas Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+}
+
+h1 > span {
+  font-family: "Lobster", cursive;
+  color: #ff10f0;
+}
+
+body {
+  font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*:focus {
+  outline-color: hsla(304, 100%, 60%, 1);
+  outline-offset: 2px;
+}
+
+/******  PAGE SPECIFIC ELEMENTS ***************/
+
+button {
+  background-color: hsla(304, 100%, 60%, 1);
+  margin-top: 1.5rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+select {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.card > h2 {
+  color: hsla(304, 100%, 70%, 1);
+}
+
 /*  Suggestion box styles */
 
 .search-container {
@@ -31,14 +85,9 @@ ul.has-suggestions {
 .suggestions-list > li {
   padding: 5px 10px;
   cursor: pointer;
+  color: black;
 }
 
 .suggestions-list li:hover {
-  background-color: rgb(231, 220, 220);
-}
-
-/* Other elements */
-
-body {
-  background-color: aqua;
+  background-color: hsla(304, 100%, 85%, 1);
 }
