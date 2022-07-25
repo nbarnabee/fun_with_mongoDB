@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.set("view engine", "ejs");
-app.set("layout", "./layouts/main");
+app.set("views", __dirname + "/views");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,14 +23,20 @@ MongoClient.connect(dbString, { useUnifiedTopology: true }).then((client) => {
 });
 
 app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.get("/nycEats", (req, res) => {
   try {
-    res.render("index");
+    res.render("./nyc_eats/index.ejs", {
+      layout: "./layouts/nyc_eats",
+    });
   } catch (error) {
     console.log(error);
   }
 });
 
-app.get("/search", async (req, res) => {
+app.get("/nycEats/search", async (req, res) => {
   let results = await db
     .collection("restaurants")
     .find(
@@ -40,7 +46,10 @@ app.get("/search", async (req, res) => {
     .limit(5)
     .toArray();
   console.log(results);
-  res.render("results", { results });
+  res.render("./nyc_eats/results.ejs", {
+    results,
+    layout: "./layouts/nyc_eats",
+  });
 });
 
 app.listen(PORT, () => {

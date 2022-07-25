@@ -1,7 +1,7 @@
 {
-  "name": "nyc_eats",
+  "name": "Fun with MongoDB",
   "version": "1.0.0",
-  "description": "Get restaurant suggestions from the database",
+  "description": "A collection of pages that make use of the sample databases provided by MongoDB",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
