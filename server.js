@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.use("/nycEats", nyc_EatsRoutes);
+app.use("/nyc-eats", nyc_EatsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
