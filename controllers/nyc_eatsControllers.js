@@ -24,7 +24,7 @@ exports.nycEatsSearch = async (req, res) => {
       )
       .limit(5)
       .toArray();
-    // I did this to try to remove all of the McDonalds et al from the Burgers results, but no luck.  I would be better off removing fast food joints from the DB, probably.
+    // I did this to try to remove all of the McDonalds et al from the Burgers results, but no luck.  Which is to say, it works, but there are JUST SO MANY.  I was having to increase the document limit up to 100 before I could consistently get results that weren't fast food places.  I would be better off removing them from the DB.
     // let names = [];
     // let filteredResults = results.filter((a) => {
     //   if (!names.includes(a.name)) {
@@ -41,6 +41,6 @@ exports.nycEatsSearch = async (req, res) => {
     console.log(error);
     // } finally {
     //   await client.close();
-    // Leaving this commented out.  If it's active, the program has trouble handling repeated searches; for some reason it doesn't want to reconnect.  Or maybe it's just being slow; I'm not sure.  I'm afraid this might create some issues further down the line, if I'm trying to open another connection.
+    // Leaving this commented out.  If it's active, the program has trouble handling repeated searches; for some reason it doesn't want to reconnect.  Or maybe it's just being slow; I'm not sure.  I'm afraid this might create some issues further down the line if I'm trying to open another connection.  More research required.
   }
 };
