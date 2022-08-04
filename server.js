@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const PORT = process.env.PORT || 5000;
-const nyc_EatsRoutes = require("./routes/nyc_eatsRoutes");
 require("dotenv").config();
 
 app.use(express.static("public"));
@@ -18,7 +17,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.use("/nyc-eats", nyc_EatsRoutes);
+app.use("/nyc-eats", require("./routes/nyc_eatsRoutes"));
+// So the routes in that file will handle any requests coming in at the "/nyc-eats" endpoint
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
